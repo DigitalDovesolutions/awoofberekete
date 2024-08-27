@@ -1,33 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  list-style: none;
+  vertical-align: baseline;
+  transition: 0.5s ease;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --first-font: "Outfit", sans-serif;
+    --second-font: "Josefin Sans", sans-serif;
+    --theme-color: #262626;
+    --second-color: #000000;
+    --border-color: #272727;
+    --black: #000000;
+    --white: #fff;
+    --grey-color: #4b4b4b;
+    --brown: #a7897b;
+    --h1: normal 700 51px/1.2 var(--second-font);
+    --h2: normal 700 42px/1.2 var(--second-font);
+    --h3: normal 700 32px/1.2 var(--second-font);
+    --h4: normal 700 22px/1.2 var(--second-font);
+    --h5: normal 700 20px/1.2 var(--second-font);
+    --h6: normal 700 18px/1.2 var(--second-font);
+    --common-text: normal 400 16px/1.4 var(--first-font);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* FONT FAMILIES */
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.outfit-bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.outfit-light {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* SEMATIC TAGS STYLING */
+p,
+li,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: var(--common-text);
+}
+
+/* SECTION STYLING */
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  @media screen and (max-width: 991px) {
+    :root {
+      --h1: normal 700 36px/1 var(--second-font);
+      --common-text: normal 400 14px/1.4 var(--first-font);
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    :root {
+      --h1: normal 700 40px/1 var(--second-font);
+      --h2: normal 700 32px/1 var(--second-font);
+      --h3: normal 700 26px/1 var(--second-font);
+      --h4: normal 700 20px/1 var(--second-font);
+      --h5: normal 700 18px/1 var(--second-font);
+      --h6: normal 700 16px/1 var(--second-font);
+    }
+  }
+
+  body {
+    font: var(--common-text);
+    background-color: var(--second-color);
+  }
+
+  h1 {
+    font: var(--h1);
+  }
+
+  h2 {
+    font: var(--h2);
+  }
+
+  h3 {
+    font: var(--h3);
+  }
+
+  h4 {
+    font: var(--h4);
+  }
+
+  h5 {
+    font: var(--h5);
+  }
+
+  h6 {
+    font: var(--h6);
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .h1 {
+    @apply font-bold leading-none;
+    font: var(--h1);
+  }
+
+  .common-text {
+    @apply font-normal leading-relaxed;
+    font: var(--common-text);
+  }
+
+  .h2 {
+    @apply font-bold leading-none;
+    font: var(--h2);
+  }
+
+  .h3 {
+    @apply font-bold leading-none;
+    font: var(--h3);
+  }
+
+  .h4 {
+    @apply font-bold leading-none;
+    font: var(--h4);
+  }
+
+  .h5 {
+    @apply font-bold leading-none;
+    font: var(--h5);
+  }
+
+  .h6 {
+    @apply font-bold leading-none;
+    font: var(--h6);
+  }
+
+  .container {
+    @apply max-w-[1170px] m-[0_auto] p-[0_15px];
   }
 }
