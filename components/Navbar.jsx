@@ -1,4 +1,5 @@
 "use client"
+
 import Link from "next/link";
 import { TbSearch } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa6";
@@ -16,10 +17,10 @@ const menuItems = [
 ];
 
 const icons = [
-  { name: "Search", icon: TbSearch, className: "text-[23px]" },
-  { name: "Favourite", icon: FaRegHeart, className: "text-[23px]" },
-  { name: "Cart", icon: MdOutlineShoppingCart, className: "text-[23px]" },
-  { name: "User", icon: PiUserCircle, className: "text-[23px]" },
+  { name: "Search", icon: TbSearch, className: "text-[23px] cursor-pointer" },
+  { name: "Favourite", icon: FaRegHeart, className: "text-[23px] cursor-pointer" },
+  { name: "Cart", icon: MdOutlineShoppingCart, className: "text-[23px] cursor-pointer" },
+  { name: "User", icon: PiUserCircle, className: "text-[23px] cursor-pointer" },
 ];
 
 const Navbar = () => {
