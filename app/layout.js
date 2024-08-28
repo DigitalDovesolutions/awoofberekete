@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
           rel="icon"
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <title>{metadata.title.default}</title>
       </head>
-      <body className="bg-background">
+      <body className="bg-background selection:bg-danger selection:text-white">
         <Navbar />
         {children}
         <Footer />

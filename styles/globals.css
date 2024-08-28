@@ -10,7 +10,7 @@
   font-size: 100%;
   list-style: none;
   vertical-align: baseline;
-  transition: 0.2s linear;
+  transition: 500ms ease-in-out;
 }
 
 @layer base {
@@ -98,7 +98,7 @@ ol {
 /* SECTION STYLING */
 @layer base {
   * {
-    @layer border-border;
+    @apply border-border;
   }
 
   @media screen and (max-width: 991px) {
