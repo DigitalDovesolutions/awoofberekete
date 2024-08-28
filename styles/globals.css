@@ -10,7 +10,7 @@
   font-size: 100%;
   list-style: none;
   vertical-align: baseline;
-  transition: 500ms ease-in-out;
+  transition: 0.2s linear;
 }
 
 @layer base {
@@ -23,6 +23,7 @@
     --black: #000000;
     --white: #fff;
     --grey-color: #4b4b4b;
+    --danger: #C9002E;
     --brown: #a7897b;
     --h1: normal 700 51px/1.2 var(--second-font);
     --h2: normal 700 42px/1.2 var(--second-font);
@@ -202,4 +203,32 @@ ol {
   width: 50%;
   height: 1px;
   background: var(--theme-color);
+}
+
+.nav-link.show:before {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  width: 50%;
+  height: 1.44px;
+  border-radius: 30%;
+  background: var(--danger);
+  animation: borborderExpandder 0.5s linear 0.6s forwards;
+}
+
+.nav-link:hover::before {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  width: 0;
+  height: 1.44px;
+  border-radius: 30%;
+  background: var(--danger);
+  animation: borderExpand 0.3s linear 0s forwards;
+}
+
+@keyframes borderExpand {
+  100% {
+    width: 50%;
+  }
 }

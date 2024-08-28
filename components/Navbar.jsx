@@ -12,7 +12,8 @@ import { useState } from "react";
 import SideNav from "./SideNav";
 
 const menuItems = [
-  { name: "Menu", href: "/" },
+  { name: "Home", href: "/" },
+  { name: "Menu", href: "/menu" },
   { name: "Gallery", href: "/gallery" },
   { name: "About us", href: "/about" },
   { name: "Contact", href: "/contact" },
@@ -36,15 +37,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
 
           {/* Logo Section */}
-          <Link href="/" className="logo">
-            <Logo width={135} height={110} />
-          </Link>
+          <Logo width={135} height={110} />
 
           {/* Menu Items */}
-          <ul className="max-[991px]:hidden flex justify-between items-center gap-16 max-md:gap-10 lg:gap-24">
+          <ul className="max-[991px]:hidden flex justify-between items-center gap-16 max-md:gap-10 lg:gap-18">
             {menuItems.map(({ name, href }) => (
-              <li key={name}>
-                <Link href={href} className={currentPath === href ? "text-danger" : "text-primary hover:text-danger transition-colors duration-700" } >{name}</Link>
+              <li key={name} className="relative">
+                <Link href={href} className={`nav-link ${currentPath === href ? "text-danger show" : "text-primary hover:text-danger transition-colors duration-700"} `} >{name}</Link>
               </li>
             ))}
           </ul>
