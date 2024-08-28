@@ -56,7 +56,7 @@ const SideNav = ({ isOpen, active }) => {
                     <Logo width={100} height={100}/>
                 </div>
 
-                <div className="">
+                <div>
                     <p className="font-semibold">...the taste of savory</p>
                 </div>
               </div>
