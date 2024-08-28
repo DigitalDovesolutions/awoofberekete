@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import logo from "@/public/assets/images/Logo/cropped-logo.png"
 
-const Logo = ({ classname }) => {
+const Logo = ({ classname, width, height }) => {
   return (
-    <Image src={logo} className={classname} loading='lazy' alt="Awoof Logo" height={100} width={100}/>
+    <Image src={logo} className={classname} loading='lazy' alt="Awoof Logo" height={height} width={width}/>
   )
 }
 

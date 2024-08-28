@@ -10,7 +10,7 @@
   font-size: 100%;
   list-style: none;
   vertical-align: baseline;
-  transition: 0.3s ease;
+  transition: 0.2s linear;
 }
 
 @layer base {
@@ -121,6 +121,8 @@ ol {
 
   body {
     font: var(--common-text);
+    overflow: hidden;
+    position: relative;
   }
 
   h1 {

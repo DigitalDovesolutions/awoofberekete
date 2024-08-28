@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* CONTACT US */}
           <div>
-            <Logo className="mb-4" />
+            <Logo className="mb-4" width={100} height={100}/>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <LiaMapMarkerAltSolid className="mr-2" />
