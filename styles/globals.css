@@ -10,7 +10,7 @@
   font-size: 100%;
   list-style: none;
   vertical-align: baseline;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 @layer base {
@@ -30,7 +30,7 @@
     --h4: normal 700 22px/1.2 var(--second-font);
     --h5: normal 700 20px/1.2 var(--second-font);
     --h6: normal 700 18px/1.2 var(--second-font);
-    --common-text: normal 400 16px/1.4 var(--first-font);
+    --common-text: normal 400 18px/1.4 var(--first-font);
   }
 
   .dark {
@@ -93,9 +93,9 @@ ol {
   font: var(--common-text);
 }
 
+
+
 /* SECTION STYLING */
-
-
 @layer base {
   * {
     @layer border-border;
@@ -104,7 +104,7 @@ ol {
   @media screen and (max-width: 991px) {
     :root {
       --h1: normal 700 36px/1 var(--second-font);
-      --common-text: normal 400 14px/1.4 var(--first-font);
+      --common-text: normal 400 16px/1.4 var(--first-font);
     }
   }
 
@@ -187,4 +187,17 @@ ol {
   .container {
     @apply max-w-[1170px] m-[0_auto] p-[0_15px];
   }
+
+  .footer-title {
+    @apply inline-block relative text-white mb-6 mt-0 pb-1 border-b border-white/10 text-lg font-bold
+  }
+}
+
+.footer-title::before {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  width: 50%;
+  height: 1px;
+  background: var(--theme-color);
 }
