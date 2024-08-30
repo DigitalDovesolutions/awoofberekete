@@ -4,34 +4,66 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 100%;
   list-style: none;
   vertical-align: baseline;
-  transition: 0.2s linear;
+  transition: all 0.2s linear;
 }
+
+
 
 @layer base {
   :root {
-    --first-font: "Outfit", sans-serif;
-    --second-font: "Josefin Sans", sans-serif;
-    --theme-color: #ECE8E3;
-    --second-color: #ffffff;
-    --border-color: #272727;
-    --black: #000000;
-    --white: #fff;
-    --grey-color: #4b4b4b;
-    --danger: #C9002E;
-    --brown: #a7897b;
-    --h1: normal 700 51px/1.2 var(--second-font);
-    --h2: normal 700 42px/1.2 var(--second-font);
-    --h3: normal 700 32px/1.2 var(--second-font);
-    --h4: normal 700 22px/1.2 var(--second-font);
-    --h5: normal 700 20px/1.2 var(--second-font);
-    --h6: normal 700 18px/1.2 var(--second-font);
-    --common-text: normal 400 18px/1.4 var(--first-font);
+
+    --font-primary: "Outfit", sans-serif;
+    --font-secondary: "Josefin Sans", sans-serif;
+    --theme-color: 0 0% 93%;
+    --secondary-color: 0 0% 100%;
+    --border-color: 0 0% 15%;
+    --black: 0 0% 0%;
+    --white: 0 0% 100%;
+    --grey-color: 0 0% 30%;
+    --danger: 0 100% 40%;
+    --brown: 25 30% 55%;
+    --h1: normal 700 51px/1.2 var(--font-secondary);
+    --h2: normal 700 42px/1.2 var(--font-secondary);
+    --h3: normal 700 32px/1.2 var(--font-secondary);
+    --h4: normal 700 22px/1.2 var(--font-secondary);
+    --h5: normal 700 20px/1.2 var(--font-secondary);
+    --h6: normal 700 18px/1.2 var(--font-secondary);
+    --common-text: normal 400 18px/1.4 var(--font-primary);
+
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 0 0% 20%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
@@ -43,7 +75,7 @@
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 0 0% 93%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -94,6 +126,17 @@ ol {
   font: var(--common-text);
 }
 
+/* Tailwind custom utility classes */
+.d-table {
+  display: table;
+  width: 100%;
+}
+
+.d-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 
 
 /* SECTION STYLING */
@@ -104,25 +147,25 @@ ol {
 
   @media screen and (max-width: 991px) {
     :root {
-      --h1: normal 700 36px/1 var(--second-font);
-      --common-text: normal 400 16px/1.4 var(--first-font);
+      --h1: normal 700 36px/1 var(--font-secondary);
+      --common-text: normal 400 16px/1.4 var(--font-primary);
     }
   }
 
   @media screen and (max-width: 1199px) {
     :root {
-      --h1: normal 700 40px/1 var(--second-font);
-      --h2: normal 700 32px/1 var(--second-font);
-      --h3: normal 700 26px/1 var(--second-font);
-      --h4: normal 700 20px/1 var(--second-font);
-      --h5: normal 700 18px/1 var(--second-font);
-      --h6: normal 700 16px/1 var(--second-font);
+      --h1: normal 700 40px/1 var(--font-secondary);
+      --h2: normal 700 32px/1 var(--font-secondary);
+      --h3: normal 700 26px/1 var(--font-secondary);
+      --h4: normal 700 20px/1 var(--font-secondary);
+      --h5: normal 700 18px/1 var(--font-secondary);
+      --h6: normal 700 16px/1 var(--font-secondary);
     }
   }
 
   body {
     font: var(--common-text);
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
   }
 
@@ -148,6 +191,10 @@ ol {
 
   h6 {
     font: var(--h6);
+  }
+
+  button {
+    cursor: pointer!important;
   }
 }
 
@@ -202,7 +249,7 @@ ol {
   bottom: -1px;
   width: 50%;
   height: 1px;
-  background: var(--theme-color);
+  background: hsl(var(--theme-color));
 }
 
 .nav-link.show:before {
@@ -212,7 +259,7 @@ ol {
   width: 50%;
   height: 1.44px;
   border-radius: 30%;
-  background: var(--danger);
+  background: hsl(var(--danger));
   animation: borborderExpandder 0.5s linear 0.6s forwards;
 }
 
@@ -223,12 +270,58 @@ ol {
   width: 0;
   height: 1.44px;
   border-radius: 30%;
-  background: var(--danger);
+  background: hsl(var(--danger));
   animation: borderExpand 0.3s linear 0s forwards;
 }
 
 @keyframes borderExpand {
   100% {
     width: 50%;
+  }
+}
+
+
+@media (max-width: 991px){
+  #Hero_section .d-table {
+    /* padding: 3rem 0 0 0; */
+    display: flex!important;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0!important;
+  }
+}
+
+@media (min-width: 992px) {
+  #Hero_section .container {
+    .greeting .content {
+      & > span {
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 10%;
+          width: 3px;
+          height: 25px;
+          background: hsl(var(--white));
+        }
+      }
+    }
+
+    .socials {
+      .line {
+        width: 120px;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 1px;
+          background: hsl(var(--black));
+        }
+      }
+    }
   }
 }

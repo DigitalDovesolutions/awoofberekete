@@ -32,7 +32,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative p-[5px_0] bg-transparent max-[991px]:bg-transparent">
+    <nav className={`relative ${isOpen ? "z-30" : "z-20"} p-[5px_0] bg-transparent max-[991px]:bg-transparent`}>
       <div className="container">
         <div className="flex justify-between items-center">
 
@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`absolute top-0 h-screen w-screen transition-opacity duration-300 ease-in-out ${isOpen ? "opacity-100 z-10" : "-z-10 opacity-0"}`}>
+      <div className={`absolute min-[991px]:hidden top-0 h-screen w-screen transition-opacity duration-300 ease-in-out ${isOpen ? "opacity-100 z-[1]" : "-z-20 opacity-0"}`}>
         <SideNav isOpen={() => setIsOpen(false)} active={isOpen} />
       </div>
     </nav>
