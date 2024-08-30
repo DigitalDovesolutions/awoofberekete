@@ -19,7 +19,7 @@ const SideNav = ({ isOpen, active }) => {
         className={`main-sidebar absolute top-0 h-screen w-screen bg-black transition-opacity duration-300 ease-linear ${
           active ? "bg-opacity-50" : "bg-opacity-100"
         }`}
-      >
+      onClick={isOpen}>
 
         <div className="sidebar-wrapper relative h-full w-full">
           <div
