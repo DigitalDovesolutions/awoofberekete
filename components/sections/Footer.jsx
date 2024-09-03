@@ -6,7 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Use usePathname for Server Components
 import Image from "next/image";
-import Logo from "./Logo";
+import Logo from "../Logo";
 
 import visa from "@/public/assets/images/Payment-cards/payment1.png";
 import amex from "@/public/assets/images/Payment-cards/payment2.png";

@@ -243,14 +243,7 @@ ol {
   }
 }
 
-.footer-title::before {
-  position: absolute;
-  content: "";
-  bottom: -1px;
-  width: 50%;
-  height: 1px;
-  background: hsl(var(--theme-color));
-}
+
 
 .nav-link.show:before {
   position: absolute;
@@ -324,4 +317,14 @@ ol {
       }
     }
   }
+}
+
+
+.footer-title::before {
+  position: absolute;
+  content: "";
+  bottom: -1px;
+  width: 50%;
+  height: 1px;
+  background: hsl(var(--theme-color));
 }

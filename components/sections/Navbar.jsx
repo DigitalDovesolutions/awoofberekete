@@ -6,10 +6,10 @@ import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { PiUserCircle } from "react-icons/pi";
 import { GiHamburger } from "react-icons/gi";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import SideNav from "./SideNav";
+import SideNav from "../SideNav";
 
 const menuItems = [
   { name: "Home", href: "/" },
