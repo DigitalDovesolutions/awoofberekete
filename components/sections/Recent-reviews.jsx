@@ -11,7 +11,7 @@ const RecentReviews = ({ reviews }) => {
           </div>
 
           <Carousel className="reviews w-full">
-            <CarouselContent className="flex -ml-1">
+            <CarouselContent className="flex -ml-1 overflow-x-hidden overflow-y-visible">
               {reviews.map((review, idx) => (
                 <CarouselItem
                   key={idx}
