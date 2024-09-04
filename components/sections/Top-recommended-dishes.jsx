@@ -43,7 +43,7 @@ const TopRecommendedDishes = ({ items }) => {
             </ul>
           </div>
 
-          <div className="meals lg:py-20 py-24 pt-[5rem] min-[476px]:pt-10 w-screen">
+          <div className="meals lg:py-20 py-24 pt-[6rem] min-[476px]:pt-16 w-screen">
             <RecomendedDishesMenu items={items} activeFilter={activeFilter} />
           </div>
         </div>

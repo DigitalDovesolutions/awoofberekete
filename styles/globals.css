@@ -126,6 +126,11 @@ ol {
   font: var(--common-text);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Tailwind custom utility classes */
 .d-table {
   display: table;

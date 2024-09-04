@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Logo = ({ classname, width, height }) => {
   return (
     <Link href="/">
-      <Image src={logo} className={classname} loading='lazy' alt="Awoof Logo" height={height} width={width}/>
+      <Image src={logo} className={`h-auto ${classname}`} loading='lazy' alt="Awoof Logo" height={height} width={width}/>
     </Link>
   )
 }

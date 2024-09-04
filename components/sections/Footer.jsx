@@ -69,7 +69,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <LiaMapMarkerAltSolid className="mr-2" />
                 <a href="#" target="_blank">
-                  Wooster Park, Chowk Bazaar, New York
+                250, Ikorodu Road, Falemi House, Off Obanikoro Bus Stop, Lagos
                 </a>
               </li>
 
@@ -94,7 +94,7 @@ const Footer = () => {
                   loading="lazy"
                   key={method.name}
                   alt={method.name}
-                  className="hover:text-gray-400"
+                  className="hover:text-gray-400 h-auto"
                 />
               ))}
             </div>
