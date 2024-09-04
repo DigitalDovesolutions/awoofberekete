@@ -224,6 +224,10 @@ img {
     font: var(--h3);
   }
 
+  .section-title {
+    @apply text-center
+  }
+
   .h4 {
     @apply font-bold leading-none;
     font: var(--h4);
