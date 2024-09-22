@@ -19,7 +19,7 @@ const TopRecommendedDishes = ({ items }) => {
   return (
     <section
       id="Top_Recommended_section"
-      className="lg:py-48 max-md:py-20 lg:pb-0"
+      className="lg:pt-48 max-md:pt-20 lg:pb-0"
     >
       <div className="container">
         <div className="section-content flex flex-col items-center">
@@ -43,7 +43,7 @@ const TopRecommendedDishes = ({ items }) => {
             </ul>
           </div>
 
-          <div className="meals lg:py-20 py-24 pt-[6rem] min-[476px]:pt-16 w-screen">
+          <div className="meals lg:pt-20 pt-[6rem] min-[476px]:pt-16 w-screen">
             <RecomendedDishesMenu items={items} activeFilter={activeFilter} />
           </div>
         </div>

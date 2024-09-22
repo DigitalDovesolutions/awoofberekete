@@ -126,6 +126,10 @@ ol {
   font: var(--common-text);
 }
 
+input {
+  outline: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -243,6 +247,10 @@ img {
     font: var(--h6);
   }
 
+  .overlay {
+    @apply bg-[#12121285] -z-0 w-[100%] h-[100%] top-0 left-0 right-0 absolute;
+  }
+
   .container {
     @apply max-w-[1170px] m-[0_auto] p-[0_15px];
   }
@@ -281,7 +289,6 @@ img {
     width: 50%;
   }
 }
-
 
 @media (max-width: 991px){
   #Hero_section .d-table {

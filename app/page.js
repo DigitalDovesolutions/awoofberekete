@@ -8,6 +8,8 @@ import Chips from "@/public/assets/images/Dishes/chicken_ketchup_pepper.png"
 import Burger from "@/public/assets/images/Dishes/review_burger.png"
 import Chicken_pepper from "@/public/assets/images/Dishes/chicken_leaf_pepper.png"
 import Random from "@/components/sections/random";
+import Newsletter from "@/components/sections/Newsletter";
+import AboutUs from "@/components/sections/About_us";
 
 export default function Home() {
   const all = [
@@ -148,8 +150,11 @@ export default function Home() {
       <HeroSection/>
       <Services/>
       <TopRecommendedDishes items={all} />
+      <AboutUs/>
+      <Random/>
       <RecentReviews reviews={reviews} />
       <Random/>
+      <Newsletter/>
     </main>
   );
 }

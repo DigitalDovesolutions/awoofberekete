@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const RecentReviews = ({ reviews }) => {
   return (
-    <section id="Recent_Review" className="pb-20">
+    <section id="Recent_Review" className="pb-20 pt-14">
       <div className="container">
         <div className="section-content flex flex-col items-center">
           <div className="section-title mb-4">

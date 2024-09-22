@@ -22,19 +22,19 @@ const Random = () => {
           </div>
 
           <div
-            className="card p-4 relative flex flex-col items-center text-center justify-center"
+            className="card p-4 relative flex flex-col items-center text-center justify-center max-sm:py-24"
             style={{ backgroundImage: `url(${MealBG.src})`, backgroundSize: "cover" }}
           >
-            <Image className="absolute h-auto left-2 top-12" src={Discount} loading="lazy" alt="Discount_flag" width={50} height={100}/>
-            <h6 className="uppercase mb-2 text-danger">Breakfast Time</h6>
-            <p className="flex flex-col gap-2">
-              <span className="capitalize font-semibold">We deliver</span> Delicious Meals to Your Doorstep.
+            <Image className="absolute h-auto left-2 top-12" src={Discount} loading="lazy" alt="Discount_flag" width={100} height={100}/>
+            <h6 className="uppercase mb-2 text-danger max-sm:text-3xl">Breakfast Time</h6>
+            <p className="flex flex-col gap-2 max-sm:text-3xl">
+              <span className="capitalize font-semibold ">We deliver</span> Delicious Meals to Your Doorstep.
             </p>
           </div>
 
           <div className="card">
             <Image
-              className="w-full object-cover"
+              className="w-full object-cover h-auto"
               src={Hamburger}
               alt="Hamburger"
               width={100}

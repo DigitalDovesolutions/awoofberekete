@@ -87,15 +87,16 @@ const Footer = () => {
             {/* PAYMENT METHODS */}
             <div className="flex space-x-4 mt-4">
               {paymentMethods.map((method) => (
-                <Image
-                  src={method.href}
-                  height={100}
-                  width={40}
-                  loading="lazy"
-                  key={method.name}
-                  alt={method.name}
-                  className="hover:text-gray-400 h-auto"
-                />
+                <div key={method.name} className="hover:text-gray-400">
+                  <Image
+                    src={method.href}
+                    height={60} // Adjusted height
+                    width={40} // Adjusted width for better display
+                    loading="lazy"
+                    alt={method.name}
+                    className="h-auto"
+                  />
+                </div>
               ))}
             </div>
           </div>
